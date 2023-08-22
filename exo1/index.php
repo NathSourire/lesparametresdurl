@@ -1,5 +1,10 @@
 <?php
-$name = 'Nathalie';
+
+// if (!isset($_GET['lastname']) || !isset($_GET['firstname'])){
+//     echo ('teste');
+//     return ;
+// }
+
 ?>
 
 <!DOCTYPE html>
@@ -24,14 +29,16 @@ $name = 'Nathalie';
                 Tester sur cette page que tous les paramètres de cette URL existent et dans ce cas, les afficher.</p>
         </div>
     </header>
-    <main class="container- fluid">
+    <main class="container-fluid">
         <div class="row">
             <div class="results position-absolute top-50 start-50 translate-middle ">
-                <p>
-                    <?php
-
-                    ?>
-                </p>
+                <a href="index.php?lastname=Nemare&;firstname=Jean">Pour voir !</a>
+                <p><?php
+                if (isset($_GET['lastname']) and isset($_GET['firstname'])) // On a le nom et le prénom
+                {
+                    echo $_GET['lastname'] . ' / ' . $_GET['firstname'];
+                }
+                ?></p>
             </div>
         </div>
     </main>

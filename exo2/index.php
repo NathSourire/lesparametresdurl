@@ -24,14 +24,19 @@ Dans cette page, écrire un lien qui renvoie vers index.php?lastname=Nemare&firs
 Tester sur cette page que le paramètre age existe et si c'est le cas l'afficher sinon le signaler.</p>
         </div>
     </header>
-    <main class="container- fluid">
+    <main class="container-fluid">
         <div class="row">
             <div class="results position-absolute top-50 start-50 translate-middle ">
-                <p>
-                    <?php
-
-                    ?>
-                </p>
+            <a href="index.php?lastname=Nemare&;firstname=Jean">Pour voir !</a>
+                <p><?php
+                if (isset($_GET['age'])) 
+                {
+                    echo $_GET['age'];
+                }
+                else  {
+                    echo 'Faux';
+                }
+                ?></p>
             </div>
         </div>
     </main>

@@ -1,5 +1,5 @@
 <?php
-$name = 'Nathalie';
+
 ?>
 
 <!DOCTYPE html>
@@ -23,14 +23,19 @@ $name = 'Nathalie';
                 index.php?startDate=2/05/2016&endDate=27/11/2016</p>
         </div>
     </header>
-    <main class="container- fluid">
+    <main class="container-fluid">
         <div class="row">
             <div class="results position-absolute top-50 start-50 translate-middle ">
-                <p>
-                    <?php
-
-                    ?>
-                </p>
+            <a href="index.php?startDate=2/05/2016&endDate=27/11/2016">Pour voir !</a>
+                <p><?php
+                if (isset($_GET['startDate']) and isset($_GET['endDate'])) 
+                {
+                    echo $_GET['startDate'] . ' / ' . $_GET['endDate'];
+                }
+                else {
+                    echo 'Faux';
+                }
+                ?></p>
             </div>
         </div>
     </main>

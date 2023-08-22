@@ -23,14 +23,19 @@ $name = 'Nathalie';
                 index.php?language=PHP&server=LAMP</p>
         </div>
     </header>
-    <main class="container- fluid">
+    <main class="container-fluid">
         <div class="row">
             <div class="results position-absolute top-50 start-50 translate-middle ">
-                <p>
-                    <?php
-
-                    ?>
-                </p>
+            <a href="index.php?language=PHP&server=LAMP">Pour voir !</a>
+                <p><?php
+                if (isset($_GET['language']) and isset($_GET['server'])) 
+                {
+                    echo $_GET['language'] . ' / ' . $_GET['server'];
+                }
+                else {
+                    echo 'Faux';
+                }
+                ?></p>
             </div>
         </div>
     </main>

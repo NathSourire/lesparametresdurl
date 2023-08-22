@@ -22,14 +22,19 @@ $name = 'Nathalie';
             <p>Faire une page index.php. Tester sur cette page que tous les paramètres de cette URL existent  et les afficher : index.php?building=12&room=101</p>
         </div>
     </header>
-    <main class="container- fluid">
+    <main class="container-fluid">
         <div class="row">
             <div class="results position-absolute top-50 start-50 translate-middle ">
-                <p>
-                    <?php
-
-                    ?>
-                </p>
+            <a href="index.php?building=12&room=101">Pour voir !</a>
+                <p><?php
+                if (isset($_GET['building']) and isset($_GET['room'])) 
+                {
+                    echo $_GET['building'] . ' /  ' . $_GET['room'];
+                }
+                else {
+                    echo 'Faux';
+                }
+                ?></p>
             </div>
         </div>
     </main>
