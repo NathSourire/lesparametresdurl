@@ -27,15 +27,22 @@
         <div class="row">
             <div class="results position-absolute top-50 start-50 translate-middle ">
             <a href="index.php?startDate=2/05/2016&endDate=27/11/2016">Pour voir !</a>
-                <p><?php
-                if (isset($_GET['startDate']) and isset($_GET['endDate'])) 
-                {
-                    echo $_GET['startDate'] . ' / ' . $_GET['endDate'];
+                <?php
+                // if (isset($_GET['startDate']) and isset($_GET['endDate'])) 
+                // {
+                //     echo $_GET['startDate'] . ' / ' . $_GET['endDate'];
+                // }
+                // else {
+                //     echo 'Faux';
+                // }
+                $startDate = filter_input(INPUT_GET, 'startDate' , FILTER_SANITIZE_SPECIAL_CHARS);
+                $endDate = filter_input(INPUT_GET, 'endDate' , FILTER_SANITIZE_SPECIAL_CHARS);
+                if ($startDate && $endDate) {
+                    var_dump($startDate.' // ' .$endDate);
+                }else{
+                    echo 'il manque une date';
                 }
-                else {
-                    echo 'Faux';
-                }
-                ?></p>
+                ?>
             </div>
         </div>
     </main>

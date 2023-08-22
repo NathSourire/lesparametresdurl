@@ -20,23 +20,21 @@ $name = 'Nathalie';
             <img class="imgLogo col-3" src="./public/assets/img/PHP-logo.png" alt="Logo PHP">
             <h1 class="col-7">Exercice 2</h1>
             <p>Faire une page index.php.
-Dans cette page, écrire un lien qui renvoie vers index.php?lastname=Nemare&firstname=Jean
-Tester sur cette page que le paramètre age existe et si c'est le cas l'afficher sinon le signaler.</p>
+                Dans cette page, écrire un lien qui renvoie vers index.php?lastname=Nemare&firstname=Jean
+                Tester sur cette page que le paramètre age existe et si c'est le cas l'afficher sinon le signaler.</p>
         </div>
     </header>
     <main class="container-fluid">
         <div class="row">
             <div class="results position-absolute top-50 start-50 translate-middle ">
-            <a href="index.php?lastname=Nemare&;firstname=Jean">Pour voir !</a>
-                <p><?php
-                if (isset($_GET['age'])) 
-                {
-                    echo $_GET['age'];
-                }
-                else  {
-                    echo 'Faux';
-                }
-                ?></p>
+                <a href="index.php?lastname=Nemare&;firstname=Jean">Pour voir !</a>
+                    <?php
+                    if (isset($_GET['age'])) {
+                        echo $_GET['age'];
+                    } else {
+                        echo 'Faux';
+                    }
+                    ?>
             </div>
         </div>
     </main>
